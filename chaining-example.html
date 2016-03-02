@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>jQuery Template</title>
+  <title>Chaining Example</title>
   <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-<script>
-$(function(){
-  
-});
-  
+  <script>
+    $(function() {
+      $('button').click(function() {
+        $('p').css('color', 'red').slideUp(2000).slideDown(2000);
+      });
+    });
   </script>
 </head>
+
 <body>
-  
+  <button>Click me</button>
+  <p>jQuery is fun!!</p>
 </body>
+
 </html>
