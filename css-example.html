@@ -1,18 +1,52 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>jQuery Template</title>
-  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-<script>
-$(function(){
-  
-});
-  
-  </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>jQuery Template</title>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script>
+        $(function() {
+            $('h1').click(function(){
+                $(this).css('color','blue');
+            });
+            
+            $('h2').mouseenter(function(){
+                $(this).css('font-family','Impact');
+            });
+            $('h2').mouseleave(function(){
+                $(this).css('font-family','Times New Roman');
+            });
+            
+            $('div').hover(
+                function(){
+                    $(this).css('width','300px');
+                },
+                function(){
+                    $(this).css('width','200px');
+                }
+            );
+            
+        });
+    </script>
+    <style>
+    h2 {
+        font-family: "Times New Roman", Georgia, Serif;
+    }
+        div {
+            background: black;
+            color: white;
+            width: 200px;
+            padding: 10px;
+        }
+    </style>
 </head>
+
 <body>
-  
+    <h1>Click me to watch me turn blue</h1>
+    <h2>Hover over me to temporarily change my font</h2>
+    <div>If you look at the jQuery behind this &lt;div&gt;, you'll see an easier way to handle hovering with only 1 listener that has 2 handlers (separated by commas).</div>
 </body>
+
 </html>
