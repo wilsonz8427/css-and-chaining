@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<!--
+  Your challenge, should you choose to accept it, is to REFACTOR the jQuery such that:
+  1) chaining is used to make the code more efficient
+  2) the result is exactly the same
+-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Chaining Refactoring</title>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script>
+        $(function() {
+            
+            $('h1').click(function() {
+                $(this).css('color', 'blue');
+                $(this).css('font-size', '50px');
+            });
+            
+            $('h2').click(function() {
+                $(this).css('color', 'red');
+                $(this).css('font-size', '15px');
+                $(this).css('font-family','Arial');
+            });
+            
+        });
+    </script>
+
+</head>
+
+<body>
+    <h1>Click to make me bigger and blue</h1>
+    <h2>Click to make me smaller and red and a different font</h2>
+
+</body>
+
+</html>
