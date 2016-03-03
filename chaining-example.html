@@ -11,6 +11,20 @@
       $('button').click(function() {
         $('p').css('color', 'red').slideUp(2000).slideDown(2000);
       });
+      
+      $('h3').click(function(){
+        $(this).css('color','red');
+        $(this).css('font-family','Arial');
+      });
+      
+      $('h4').click(function(){
+        $(this).css('color','red').css('font-family','Arial');
+      });
+      
+      $('h5').click(function(){
+        $(this).css({'color':'red','font-family':'Arial'});
+      });
+      
     });
   </script>
 </head>
@@ -18,6 +32,9 @@
 <body>
   <button>Click me</button>
   <p>jQuery is fun!!</p>
+  <h3>This is one way to change multiple CSS properties at the same time.</h3>
+  <h4>But this is more efficient.</h4>
+  <h5>And this is MOST efficient.</h5>
 </body>
 
 </html>
